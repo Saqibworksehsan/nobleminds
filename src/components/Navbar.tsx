@@ -31,7 +31,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => handleNavigate('home')}
           >
-            <img src="./logo2.png" alt="Noble Minds" className="h-12 w-auto" />
+            <img src="./logo3.jpg" alt="Noble Minds" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Nav */}

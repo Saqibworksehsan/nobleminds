@@ -28,10 +28,14 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo + Star */}
           <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => handleNavigate('home')}
+            className="flex items-center gap-3 px-4 cursor-pointer"
+            onClick={() => handleNavigate("home")}
           >
-            <img src="./logo3.jpg" alt="Noble Minds" className="h-12 w-auto" />
+            <img
+              src="./logo4.png"
+              alt="Noble Minds"
+              className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Nav */}
@@ -41,11 +45,11 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors
-                  ${currentPage === item.id
-                    ? 'text-emerald-400'
-                    : 'text-gray-300 hover:text-emerald-300'
-                  }`
-                }
+                  ${
+                    currentPage === item.id
+                      ? "text-emerald-400"
+                      : "text-gray-300 hover:text-emerald-300"
+                  }`}
               >
                 {item.label}
                 {currentPage === item.id && (
@@ -75,11 +79,11 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
                 className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium
-                  ${currentPage === item.id
-                    ? 'bg-emerald-900/50 text-emerald-300'
-                    : 'text-gray-300 hover:bg-slate-700 hover:text-emerald-300'
-                  }`
-                }
+                  ${
+                    currentPage === item.id
+                      ? "bg-emerald-900/50 text-emerald-300"
+                      : "text-gray-300 hover:bg-slate-700 hover:text-emerald-300"
+                  }`}
               >
                 {item.label}
               </button>

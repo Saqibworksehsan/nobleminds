@@ -14,51 +14,35 @@ export default function About() {
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Noble Minds is a multidisciplinary consulting firm founded by <strong>Dr. Md Arqam V K</strong>, a seasoned professional with expertise spanning economics, manufacturing, public policy, and academic development.
-            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">Noble Minds is a results-first consulting firm led by <strong>Dr. Md Arqam V K</strong>. We blend academic rigor with hands-on delivery to solve complex problems and accelerate institutional change.</p>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Built on the principles of precision, trust, and impactful execution, Noble Minds integrates business intelligence with real-world industry experience. We combine the strategic depth of global consulting standards with the agility and personalization required by today's evolving enterprises.
-            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">We don’t measure success by activity alone — we measure it by outcomes. Our multidisciplinary teams turn strategy into measurable execution, aligning governance, technology and operations to create sustainable impact.</p>
 
             <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 my-12 rounded-r-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Identity as a Firm</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">How We Stand Apart</h2>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="text-emerald-600 mr-3 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-700">
-                    We operate with excellence and analytical rigor.
-                  </p>
+                  <p className="text-gray-700">Relentless execution focused on measurable KPIs.</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-emerald-600 mr-3 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-700">
-                    We deliver comprehensive, end-to-end solutions — from policy to strategy, from technology to compliance.
-                  </p>
+                  <p className="text-gray-700">Integrated advisory that closes the gap between plan and performance.</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-emerald-600 mr-3 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-700">
-                    We value long-term partnerships built on transparency and results.
-                  </p>
+                  <p className="text-gray-700">Long-term partnerships that prioritise value creation over one-off engagements.</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-emerald-600 mr-3 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-700">
-                    Our multidisciplinary teams collaborate seamlessly to bring clarity to complexity.
-                  </p>
+                  <p className="text-gray-700">A practical, research-backed approach to institutional and technological transformation.</p>
                 </div>
               </div>
             </div>
 
             <div className="text-center py-12 bg-slate-50 rounded-lg">
-              <p className="text-2xl font-semibold text-gray-900 mb-3">
-                At Noble Minds, we do not merely advise.
-              </p>
-              <p className="text-xl text-emerald-600 font-medium">
-                We implement. We innovate. We elevate.
-              </p>
+              <p className="text-2xl font-semibold text-gray-900 mb-3">We don't just design strategy.</p>
+              <p className="text-xl text-emerald-600 font-medium">We build the systems and teams that make it real.</p>
             </div>
           </div>
         </div>

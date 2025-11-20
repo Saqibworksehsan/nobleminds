@@ -6,13 +6,27 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Leadership from './pages/Leadership';
 import WhyNobleMinds from './pages/WhyNobleMinds';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const initial = (typeof window !== 'undefined' && window.location.hash) ? window.location.hash.replace('#', '') : 'home';
+  const [currentPage, setCurrentPage] = useState(initial || 'home');
 
+  // sync scrolling on page change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  // listen to hash changes so direct links work
+  useEffect(() => {
+    const onHash = () => {
+      const h = window.location.hash.replace('#', '') || 'home';
+      setCurrentPage(h);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -24,6 +38,10 @@ function App() {
         return <Services />;
       case 'leadership':
         return <Leadership />;
+      case 'blog':
+        return <Blog />;
+      case 'contact':
+        return <Contact />;
       case 'why':
         return <WhyNobleMinds />;
       default:

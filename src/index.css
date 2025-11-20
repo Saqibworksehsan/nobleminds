@@ -1,3 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+	--brand-teal: #14b8a6;
+	--brand-teal-600: #0d9488;
+	--brand-orange: #f97316;
+	--muted-gray: #64748b;
+}
+
+/* Base typography and smooth UI */
+@layer base {
+	html, body, #root { height: 100%; }
+	body {
+		font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+		color: #0f172a;
+		background-color: #ffffff;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+	h1, h2, h3, h4 { letter-spacing: -0.01em; }
+	a { text-decoration: none; }
+}
+
+/* Reusable component utilities */
+@layer components {
+	.card {
+		@apply bg-white rounded-xl shadow-sm; 
+	}
+	.btn-primary {
+		@apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold shadow-sm;
+		background: linear-gradient(90deg,var(--brand-orange), #fb923c);
+		color: white;
+	}
+	.btn-accent {
+		@apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold;
+		background: linear-gradient(90deg,var(--brand-teal), #10b981);
+		color:white;
+	}
+}
+
+/* Simple fade-up animation */
+@keyframes fadeUp {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 480ms cubic-bezier(.2,.9,.3,1) both; }
+
+/* Respect user motion */
+@media (prefers-reduced-motion: reduce) {
+	.animate-fade-up { animation: none; }
+}
+
+/* Improved prose readability (no typography plugin required) */
+.prose-lg {
+	max-width: 65ch;
+	line-height: 1.85;
+	font-size: 1.05rem;
+}
+.prose-lg p {
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
+	color: #334155;
+}
+.prose-lg h3 {
+	margin-top: 1.2em;
+}
+
+/* Creative theme additions: gradients, shapes, buttons, and animations */
+.gradient-accent {
+	background: linear-gradient(135deg, rgba(20,184,166,0.12) 0%, rgba(249,115,22,0.06) 100%);
+}
+
+.gradient-text {
+	background: linear-gradient(90deg,var(--brand-teal),var(--brand-orange));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.decorative-shape {
+	position: absolute;
+	pointer-events: none;
+	filter: blur(30px);
+	opacity: 0.55;
+}
+
+.btn-primary {
+	@apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold shadow-sm;
+	background: linear-gradient(90deg,var(--brand-teal), #10b981);
+	color: white;
+}
+
+.btn-accent {
+	@apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold shadow-sm;
+	background: linear-gradient(90deg,var(--brand-orange), #fb923c);
+	color: white;
+}
+
+/* float animation for subtle motion */
+@keyframes floaty {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-6px); }
+	100% { transform: translateY(0); }
+}
+.animate-float { animation: floaty 5s ease-in-out infinite; }
+
+/* card accent */
+.card-creative { box-shadow: 0 12px 40px rgba(2,6,23,0.08); border-radius: 1rem; }
+
+/* responsive heading scale */
+@media (min-width: 1024px) {
+	h1 { font-size: 3.25rem; }
+}

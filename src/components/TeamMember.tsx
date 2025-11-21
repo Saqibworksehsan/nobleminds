@@ -8,15 +8,19 @@ interface TeamMemberProps {
   alt?: string;
   email?: string;
   linkedin?: string;
+  large?: boolean;
 }
 
-export default function TeamMember({ name, role, bio, imgSrc, alt, email, linkedin }: TeamMemberProps) {
+export default function TeamMember({ name, role, bio, imgSrc, alt, email, linkedin, large }: TeamMemberProps) {
   const initials = name
     .split(" ")
     .map((n) => n[0])
     .slice(0, 2)
     .join("")
     .toUpperCase();
+
+  const sizeClass = large ? "h-56 w-56 sm:h-64 sm:w-64" : "h-16 w-16";
+  const nameClass = large ? "text-2xl font-semibold" : "text-gray-900 font-semibold";
 
   return (
     <div className="card-creative bg-white border border-slate-100 p-6 animate-fade-up">
@@ -25,16 +29,16 @@ export default function TeamMember({ name, role, bio, imgSrc, alt, email, linked
           <img
             src={imgSrc}
             alt={alt || name}
-            className="h-16 w-16 rounded-full object-cover"
+            className={`${sizeClass} rounded-full object-cover ring-4 ring-emerald-50 shadow-2xl`}
           />
         ) : (
-          <div className="h-16 w-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-semibold">
+          <div className={`${sizeClass} rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-semibold`}> 
             {initials}
           </div>
         )}
 
         <div>
-          <p className="text-gray-900 font-semibold">{name}</p>
+          <p className={nameClass}>{name}</p>
           {role && <p className="text-sm text-gray-600">{role}</p>}
         </div>
       </div>

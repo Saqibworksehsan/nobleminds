@@ -56,10 +56,10 @@ export default function Footer() {
             </h4>
             <p className="text-slate-600">+91 80156 21121</p>
             <a 
-              href="mailto:info@nobleminds.in.net" 
+              href="mailto:infonobleminds@gmail.com" 
               className="text-slate-600 hover:text-emerald-600 transition block"
             >
-              info@nobleminds.in.net
+              infonobleminds@gmail.com
             </a>
 
             <div className="mt-4">

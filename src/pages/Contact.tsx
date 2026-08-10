@@ -32,7 +32,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Email</p>
-                  <a href="mailto:info@nobleminds.in.net" className="text-lg font-medium text-emerald-700 hover:underline">info@nobleminds.in.net</a>
+                  <a href="mailto:infonobleminds@gmail.com" className="text-lg font-medium text-emerald-700 hover:underline">infonobleminds@gmail.com</a>
                 </div>
               </div>
 
